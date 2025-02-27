@@ -59,6 +59,12 @@ body {
     width: 250px;
     object-fit: cover;
     border-radius: 15px;
+    animation-name: fa;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+
 }
 
 .btn_add {
@@ -74,4 +80,99 @@ body {
 
 .btn_add:hover {
     background: #e0e0e0;
+}
+
+h1, p{
+    margin: 0;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: -50px;
+    color: black;
+}
+p{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+.window-backgroud{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.window-container{
+    position: relative;
+    background-color: white;
+    width: 550px;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 30px;
+    animation-name: modal;
+    animation-duration: .5s;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .4);
+}
+
+@keyframes modal{
+    from{
+        transform: translateY(50vh);
+
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+.close{
+    transition: transform 1s cubic-bezier (0, -0.43, 1, -0.41);
+    transform: translateY(60vh);
+}
+
+.close-button{
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    cursor: pointer;
+    margin-left: -20px;
+    left: 30px;
+}
+
+.icon-x{
+    fill: rgb(red, green, blue);
+}
+
+.imagen-modal{
+    height: 450px;
+    animation-name: girarb;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+}
+
+@keyframes fa {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
