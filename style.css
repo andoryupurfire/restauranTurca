@@ -1,3 +1,61 @@
 body{
-    color: red;
+    margin: 0;
+    background-color: #4af;
+    font-family: 'Outfit', sans-serif;
 }
+
+.navbar__nav{
+    background-color: #fff;   
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 27px;
+}
+
+.navbar__logo{
+    width: 250px;
+    height: 107px;
+    padding: 10px 0 10px 80px;
+}
+
+.navbar__list{
+    text-align: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar__item{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar__link{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.navbar__link:active, .navbar__link:hover{
+    color: #952113;
+}
+
+.navbar__btn{
+    background-color: #b31721; 
+    color: white; 
+    padding: 10px 80px; 
+    border-radius: 40px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.navbar__btn:hover {
+    background-color: #c0392b; /* Un rojo más oscuro al pasar el mouse */
+  }
