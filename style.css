@@ -21,7 +21,7 @@ header{
 .navbar__logo{
     width: 250px;
     height: 107px;
-    padding: 10px 0 10px 80px;
+    padding: 10px 0 10px 100px;
 }
 
 .navbar__list{
@@ -42,7 +42,8 @@ header{
 .navbar__link{
     text-decoration: none;
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
+    padding-right: 20px;
 
 }
 
@@ -58,7 +59,7 @@ header{
     text-decoration: none; 
     font-weight: bold; 
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 100px;
 }
 
 .navbar__btn:hover {
@@ -68,7 +69,11 @@ header{
 .hero{
     margin: 0;
     padding: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 .hero__fondo{
@@ -81,4 +86,33 @@ header{
     background-size: 100% 100%, 4px 4px, 4px 4px;
     width: 100%;
     height: calc(100vh - 128px);
+    display: flex;
+}
+
+.hero__text{
+    flex: 1;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.hero__h1{
+    font-size: 72px;
+    margin: 0;
+    margin-left: 30px;
+}
+
+.hero__h2{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.hero__img{
+    max-width: 50%;
+    object-fit: cover;
 }
