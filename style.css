@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0;
     font-family: 'Outfit', sans-serif;
@@ -66,31 +71,32 @@ header{
     background-color: #c0392b; 
   }
 
+/** Editando el Hero **/
+
+
+
+
+
+
+
+
 .hero{
     margin: 0;
     padding: 0;
     color: #fff;
-    display: flex;
-    justify-content: center;
+
 }
-
-
 
 .hero__fondo{
     margin: 0;
-    background-color: #990000;
-    background-image: 
-      radial-gradient(ellipse at center, transparent 0%, transparent 65%, rgba(0,0,0,0.2) 100%),
-      repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 2px),
-      repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 2px);
-    background-size: 100% 100%, 4px 4px, 4px 4px;
+    background-image: url(/public/imagen_hero.png);
     width: 100%;
     height: calc(100vh - 128px);
     display: flex;
 }
 
 .hero__text{
-    flex: 1;
+
     padding-right: 1rem;
     display: flex;
     flex-direction: column;
@@ -106,13 +112,30 @@ header{
 }
 
 .hero__h2{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 300;
     margin-top: 30px;
     margin-left: 30px;
 }
 
-.hero__img{
+.hero__img  {
     max-width: 50%;
     object-fit: cover;
+    margin-right: 25px;
 }
+
+.carrusel__one{
+    position: relative;
+}
+
+.hero__flechas{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+  
