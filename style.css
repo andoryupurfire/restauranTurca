@@ -74,41 +74,43 @@ header{
 /** Editando el Hero **/
 
 
-
-
-
-
-
-
 .hero{
     margin: 0;
     padding: 0;
     color: #fff;
-
 }
 
 .hero__fondo{
     margin: 0;
     background-image: url(/public/imagen_hero.png);
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: calc(100vh - 128px);
     display: flex;
+    position: relative;
+    
+    /* Añadimos transición para efecto suave */
+    transition: opacity 0.3s ease;
 }
 
 .hero__text{
-
     padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+    z-index: 1;
+    /* Añadimos transición para texto */
+    transition: transform 0.5s ease;
 }
 
 .hero__h1{
     font-size: 72px;
     margin: 0;
     margin-left: 30px;
+    /* Añadimos transición */
+    transition: all 0.5s ease;
 }
 
 .hero__h2{
@@ -116,12 +118,17 @@ header{
     font-weight: 300;
     margin-top: 30px;
     margin-left: 30px;
+    /* Añadimos transición */
+    transition: all 0.5s ease;
 }
 
-.hero__img  {
+.hero__img {
     max-width: 50%;
     object-fit: cover;
     margin-right: 25px;
+    z-index: 1;
+    /* Añadimos transición para la imagen */
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carrusel__one{
@@ -136,6 +143,60 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
+}
 
+.hero__flechas i {
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero__flechas i:hover {
+    background-color: rgba(179, 23, 33, 0.7);
+}
+
+/* Indicadores de slide (opcional) */
+.hero__indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #b31721;
+}
+
+/* Animaciones para el carrusel */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
   
