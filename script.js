@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 image: '/public/imagen.png'
             },
             {
-                background: '/public/imagen_hero2.png', // Añade esta imagen
+                background: '/public/imagen_hero2.png', 
                 title: 'Sabores Únicos en Cada Plato',
                 subtitle: 'Nuestros chefs preparan cada kebab con<br> ingredientes frescos y técnicas tradicionales<br> de Turquía',
-                image: '/public/imagen2.png' // Añade esta imagen
+                image: '/public/imagen2.png' 
             },
             {
-                background: '/public/imagen_hero3.png', // Añade esta imagen
+                background: '/public/imagen_hero3.png', 
                 title: 'Ambiente Acogedor y Tradicional',
                 subtitle: 'Disfruta de una experiencia culinaria única<br> en un espacio inspirado en la cultura turca',
-                image: '/public/imagen3.png' // Añade esta imagen
+                image: '/public/imagen3.png' 
             }
         ],
         
