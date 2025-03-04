@@ -89,8 +89,6 @@ header{
     height: calc(100vh - 128px);
     display: flex;
     position: relative;
-    
-    /* Añadimos transición para efecto suave */
     transition: opacity 0.3s ease;
 }
 
@@ -109,7 +107,6 @@ header{
     font-size: 72px;
     margin: 0;
     margin-left: 30px;
-    /* Añadimos transición */
     transition: all 0.5s ease;
 }
 
@@ -118,7 +115,6 @@ header{
     font-weight: 300;
     margin-top: 30px;
     margin-left: 30px;
-    /* Añadimos transición */
     transition: all 0.5s ease;
 }
 
@@ -127,7 +123,6 @@ header{
     object-fit: cover;
     margin-right: 25px;
     z-index: 1;
-    /* Añadimos transición para la imagen */
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
