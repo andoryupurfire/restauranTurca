@@ -71,9 +71,8 @@ header{
     background-color: #c0392b; 
   }
 
+
 /** Editando el Hero **/
-
-
 .hero{
     margin: 0;
     padding: 0;
@@ -105,11 +104,11 @@ header{
 }
 
 .hero__fondo.slide-out{
-    animation: slideOutLeft 0.4s cubic-bezier(.18,0,.77,.99);
+    animation: slideOutLeft 0.5s ease;
 }
 
 .hero__fondo.slide-in {
-    animation: slideInRight 0.4s cubic-bezier(.18,0,.77,.99);
+    animation: slideInRight 0.5s ease;
 }
 
 .hero__fondo{
@@ -193,7 +192,7 @@ header{
     background-color: rgba(179, 23, 33, 0.7);
 }
 
-/* Indicadores de slide (opcional) */
+
 .hero__indicators {
     position: absolute;
     bottom: 20px;
@@ -217,7 +216,7 @@ header{
     background-color: #b31721;
 }
 
-/* Animaciones para el carrusel */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -228,3 +227,5 @@ header{
     to { transform: translateX(0); opacity: 1; }
 }
   
+
+/** Editando el Hero **/
