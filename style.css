@@ -228,4 +228,25 @@ header{
 }
   
 
-/** Editando el Hero **/
+/** Editando el menu **/
+
+.menu{
+margin: 0;
+}
+
+
+
+.menu__options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu__iconos{
+    width: 100px;
+}
+
+.menu__tittle{
+    display: block;
+}
