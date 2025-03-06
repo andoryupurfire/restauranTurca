@@ -234,19 +234,28 @@ header{
 margin: 0;
 }
 
-
-
 .menu__options{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    gap: 150px;
+}
 
+.menu__options > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 10px;
 }
 
 .menu__iconos{
-    width: 100px;
+    width: 70px;
+    margin-bottom: 3px;
 }
 
 .menu__tittle{
     display: block;
+    margin-top: 3px;
+    font-size: 1em;
 }
