@@ -85,4 +85,62 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Iniciar el carrusel
     carrusel.init();
+
+    const menuInteractivo = {
+        init: function() {
+            // Obtener todos los elementos de menú
+            this.menuItems = document.querySelectorAll('.menu__options > div');
+            this.categories = document.querySelectorAll('.menu__category');
+            
+            // Mostrar la primera categoría por defecto
+            if (this.categories.length > 0) {
+                this.showCategory('mezeler-section');
+                this.setActiveMenuItem(this.menuItems[0]);
+            }
+            
+            // Agregar eventos de clic a cada ícono del menú
+            this.menuItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    const categoryIds = ['mezeler-section', 'kebabs-section', 'tatillar-section', 'bebidas-section'];
+                    if (categoryIds[index]) {
+                        this.showCategory(categoryIds[index]);
+                        this.setActiveMenuItem(item);
+                    }
+                });
+                
+                // Hacer que los iconos sean claramente clickeables
+                item.style.cursor = 'pointer';
+            });
+        },
+        
+        // Mostrar la categoría seleccionada y ocultar las demás
+        showCategory: function(categoryId) {
+            this.categories.forEach(category => {
+                if (category.id === categoryId) {
+                    category.classList.add('active');
+                    
+                    // Desplazar la página hasta la categoría
+                    setTimeout(() => {
+                        category.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                } else {
+                    category.classList.remove('active');
+                }
+            });
+        },
+        
+        // Marcar el ícono activo
+        setActiveMenuItem: function(activeItem) {
+            this.menuItems.forEach(item => {
+                if (item === activeItem) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+    };
+    
+    // Inicializar el menú interactivo
+    menuInteractivo.init();
 });
