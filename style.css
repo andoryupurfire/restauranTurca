@@ -10,7 +10,7 @@ body {
 
 }
 
-.container {  
+.contenedor {  
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
@@ -19,7 +19,7 @@ body {
     justify-content: center;
 }
 
-.card-container {
+.tarjetas__container {
     display: flex;
     align-items: center;
     width: 500px;
@@ -31,10 +31,10 @@ body {
 }
 
 
-.card-container:nth-child(1) { background: #952113; } /* Baklava */
-.card-container:nth-child(2) { background: #ff6401; } /* Cheesecake */
-.card-container:nth-child(3) { background: #ed361f; } /* Tiramisú */
-.card-container:nth-child(4) { background: #fba100; } /* Brownie */
+.tarjetas__container:nth-child(1) { background: #952113; } /* Baklava */
+.tarjetas__container:nth-child(2) { background: #ff6401; } /* Cheesecake */
+.tarjetas__container:nth-child(3) { background: #ed361f; } /* Tiramisú */
+.tarjetas__container:nth-child(4) { background: #fba100; } /* Brownie */
 
 .header {
     flex: 1; 
@@ -82,21 +82,6 @@ body {
     background: #e0e0e0;
 }
 
-h1, p{
-    margin: 0;
-}
-
-h1{
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: -50px;
-    color: black;
-}
-p{
-    font-size: 18px;
-    font-weight: 400;
-    color: black;
-}
 
 .window-backgroud{
     width: 100%;
@@ -166,6 +151,22 @@ p{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     display: inline-block;
+}
+
+.modal-title, .modal-description{
+    margin: 0;
+}
+
+.modal-title{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: -50px;
+    color: black;
+}
+.modal-description{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
 }
 
 @keyframes fa {

@@ -1,15 +1,14 @@
 const windowBackgroud = document.getElementById("window-backgroud"),
     windowContainer = document.getElementById("window-container"),
-    openButton = document.getElementById("btn_abrir"),
     closeButton = document.getElementById("close-button")
 
 
 
 
 const modal = document.getElementById("window-backgroud");
-const modalTitle = modal.querySelector("h1");
+const modalTitle = modal.querySelector(".modal-title");
 const modalImage = modal.querySelector(".imagen-modal");
-const modalDescription = modal.querySelector("p");
+const modalDescription = modal.querySelector(".modal-description");
 
 
 const productos = {
@@ -39,7 +38,7 @@ const productos = {
 document.querySelectorAll(".btn_add").forEach(button => {
     button.addEventListener("click", function () {
 
-        const card = this.closest(".card-container");
+        const card = this.closest(".tarjetas__container");
         const title = card.querySelector("h2").innerText;
 
 
