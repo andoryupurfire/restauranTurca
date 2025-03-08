@@ -6,20 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide: 0,
         slides: [
             {
-                background: '/public/imagen_hero.png',
                 title: 'Descubre la Autentica Comida Turca',
                 subtitle: 'Sumérgete en la riqueza de la gastronomía turca,<br> donde cada bocado es una deleite de sabor y<br> tradición',
                 image: '/public/imagen.png'
             },
             {
-                background: '/public/imagen_hero.png', 
                 title: 'Sabores de Turquía en Cada Bocado',
                 subtitle: 'Nuestros chefs preparan cada kebab con<br> ingredientes frescos y técnicas tradicionales<br> de Turquía',
                 image: '/public/borek.png' 
             },
         ],
         
-        // Inicializa el carrusel
+
         init: function() {
             // Obtener elementos
             this.heroContainer = document.querySelector('.hero');
@@ -38,11 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
             leftArrow.addEventListener('click', () => this.prevSlide());
             rightArrow.addEventListener('click', () => this.nextSlide());
             
+            //Configurar indicadores
+            this.indicators = document.querySelectorAll('.indicator');
+            this.indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click',() => {
+                    this.showSlide(index);
+                    this.updateIndicators(index);
+                })
+            })
+
+
             // Mostrar el primer slide
             this.showSlide(this.currentSlide);
             
             // Iniciar rotación automática (opcional)
             this.autoSlideInterval = setInterval(() => this.nextSlide(), 5000);
+   
         },
         
         // Muestra un slide específico
@@ -51,21 +60,30 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Añadir clases para animación
             this.heroFondo.classList.add('slide-out');
+            this.heroSubtitle.classList.add('slide-out');
+            this.heroImage.classList.add('slide-out');
             
             setTimeout(() => {
                 // Actualizar contenido
-                this.heroFondo.style.backgroundImage = `url(${slide.background})`;
                 this.heroTitle.innerHTML = slide.title;
                 this.heroSubtitle.innerHTML = slide.subtitle;
                 this.heroImage.src = slide.image;
                 
-                // Remover y añadir clases para nueva animación
-                this.heroFondo.classList.remove('slide-out');
-                this.heroFondo.classList.add('slide-in');
+                // Remover 
+                this.heroTitle.classList.remove('slide-out');
+                this.heroSubtitle.classList.remove('slide-out');
+                this.heroImage.classList.remove('slide-out');
+
+                //Añadir 
+                this.heroTitle.classList.remove('slide-in');
+                this.heroSubtitle.classList.remove('slide-in');
+                this.heroImage.classList.remove('slide-in');
                 
                 // Quitar clase de entrada después de la animación
                 setTimeout(() => {
-                    this.heroFondo.classList.remove('slide-in');
+                this.heroTitle.classList.remove('slide-in');
+                this.heroSubtitle.classList.remove('slide-in');
+                this.heroImage.classList.remove('slide-in');
                 }, 500);
             }, 300);
         },
@@ -80,7 +98,18 @@ document.addEventListener('DOMContentLoaded', function() {
         prevSlide: function() {
             this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
             this.showSlide(this.currentSlide);
+        },
+
+        updateIndicators: function(index) {
+            this.indicators.forEach((indicator, i) => {
+                if (i === index) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
         }
+
     };
     
     // Iniciar el carrusel
