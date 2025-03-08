@@ -357,7 +357,6 @@ margin: 0;
 
 .tarjetas{
     justify-content: center;
-    align-items: center;
     height: 100vh;
     margin-top: 70px;
     background-color: #f5f5f5;;
@@ -370,6 +369,7 @@ margin: 0;
     max-width: 900px;
     width: 100%;
     justify-content: center;
+    align-items: center;
     margin: auto;
     margin-top: 100px;
 }
