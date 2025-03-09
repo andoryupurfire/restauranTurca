@@ -58,34 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide: function(index) {
             const slide = this.slides[index];
             
-            // Añadir clases para animación
-            this.heroFondo.classList.add('slide-out');
+            // Añadir clases para animación de salida
+            this.heroTitle.classList.add('slide-out');
             this.heroSubtitle.classList.add('slide-out');
             this.heroImage.classList.add('slide-out');
             
+            // Aumenta este tiempo para dar más tiempo a la animación de salida
             setTimeout(() => {
                 // Actualizar contenido
                 this.heroTitle.innerHTML = slide.title;
                 this.heroSubtitle.innerHTML = slide.subtitle;
                 this.heroImage.src = slide.image;
                 
-                // Remover 
+                // Remover clases de salida
                 this.heroTitle.classList.remove('slide-out');
                 this.heroSubtitle.classList.remove('slide-out');
                 this.heroImage.classList.remove('slide-out');
-
-                //Añadir 
-                this.heroTitle.classList.remove('slide-in');
-                this.heroSubtitle.classList.remove('slide-in');
-                this.heroImage.classList.remove('slide-in');
+        
+                // Añadir clases para animación de entrada
+                this.heroTitle.classList.add('slide-in');
+                this.heroSubtitle.classList.add('slide-in');
+                this.heroImage.classList.add('slide-in');
                 
                 // Quitar clase de entrada después de la animación
+                // Aumenta este tiempo para que coincida con la duración más larga de las animaciones
                 setTimeout(() => {
-                this.heroTitle.classList.remove('slide-in');
-                this.heroSubtitle.classList.remove('slide-in');
-                this.heroImage.classList.remove('slide-in');
-                }, 500);
-            }, 300);
+                    this.heroTitle.classList.remove('slide-in');
+                    this.heroSubtitle.classList.remove('slide-in');
+                    this.heroImage.classList.remove('slide-in');
+                }, 1200); // Coincide con la duración más larga
+            }, 800); // Coincide con la duración de la animación de salida
+            
+            // Actualizar los indicadores
+            this.updateIndicators(index);
         },
         
         // Navega al siguiente slide

@@ -79,48 +79,55 @@ header{
     color: #fff;
 }
 
-.hero-slide-container{
-    position: relative;
-    overflow: hidden;
+
+@keyframes slideOutText {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-50px); }
 }
 
-@keyframes slideOutLeft{
-    from {transform: translateX(0);}
-    to {transform: translateX(0);}
-}
-@keyframes slideInRight {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
+@keyframes slideInText {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes slideOutRight {
-    from { transform: translateX(0); }
-    to { transform: translateX(100%); }
+@keyframes slideOutImage {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(50px); }
 }
 
-@keyframes slideInLeft {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
+@keyframes slideInImage {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.hero__fondo.slide-out{
-    animation: slideOutLeft 0.5s ease;
+/* Corrige este selector que tiene un error */
+.hero__h1.slide-out, .hero__h2.slide-out {
+    animation: slideOutText 0.6s ease forwards; /* Duración aumentada */
 }
 
-.hero__fondo.slide-in {
-    animation: slideInRight 0.5s ease;
+.hero__h1.slide-in, .hero__h2.slide-in {
+    animation: slideInText 1s ease forwards; /* Duración aumentada */
 }
+
+.hero__img.slide-out {
+    animation: slideOutImage 0.8s ease forwards; /* Duración aumentada */
+}
+
+.hero__img.slide-in {
+    animation: slideInImage 1.2s ease forwards; /* Duración aumentada */
+}
+
 
 .hero__fondo{
     margin: 0;
-
+    background-image: url('/public/imagen_hero.png');
     background-size: cover;
     background-position: center;
     width: 100%;
     height: calc(100vh - 128px);
     display: flex;
     position: relative;
-    transition: opacity 0.3s ease;
+    overflow: hidden;
 }
 
 
@@ -131,14 +138,13 @@ header{
     justify-content: center;
     text-align: center;
     z-index: 1;
-    transition: transform 0.5s ease;
 }
 
 .hero__h1{
     font-size: 72px;
     margin: 0;
     margin-left: 30px;
-    transition: all 0.5s ease;
+
 }
 
 .hero__h2{
@@ -146,7 +152,7 @@ header{
     font-weight: 300;
     margin-top: 30px;
     margin-left: 30px;
-    transition: all 0.5s ease;
+
 }
 
 .hero__img {
@@ -154,7 +160,6 @@ header{
     object-fit: cover;
     margin-right: 25px;
     z-index: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carrusel__one{
