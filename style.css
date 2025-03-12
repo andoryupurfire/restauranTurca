@@ -1,0 +1,609 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.navbar__nav{
+    background-color: #fff;   
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 27px;
+}
+
+.navbar__logo{
+    width: 250px;
+    height: 107px;
+    padding: 10px 0 10px 100px;
+}
+
+.navbar__list{
+    text-align: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar__item{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar__link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    padding-right: 20px;
+
+}
+
+.navbar__link:active, .navbar__link:hover{
+    color: #952113;
+}
+
+.navbar__btn{
+    background-color: #b31721; 
+    color: white; 
+    padding: 10px 80px; 
+    border-radius: 40px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.navbar__btn:hover {
+    background-color: #c0392b; 
+  }
+
+
+/** Editando el Hero **/
+.hero{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+
+@keyframes slideOutText {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-50px); }
+}
+
+@keyframes slideInText {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOutImage {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(50px); }
+}
+
+@keyframes slideInImage {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Corrige este selector que tiene un error */
+.hero__h1.slide-out, .hero__h2.slide-out {
+    animation: slideOutText 0.6s ease forwards; /* Duración aumentada */
+}
+
+.hero__h1.slide-in, .hero__h2.slide-in {
+    animation: slideInText 1s ease forwards; /* Duración aumentada */
+}
+
+.hero__img.slide-out {
+    animation: slideOutImage 0.8s ease forwards; /* Duración aumentada */
+}
+
+.hero__img.slide-in {
+    animation: slideInImage 1.2s ease forwards; /* Duración aumentada */
+}
+
+
+.hero__fondo{
+    margin: 0;
+    background-image: url('/public/imagen_hero.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: calc(100vh - 128px);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero__text{
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero__h1{
+    font-size: 72px;
+    margin: 0;
+    margin-left: 30px;
+
+}
+
+.hero__h2{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.hero__img {
+    max-width: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    z-index: 1;
+}
+
+.carrusel__one{
+    position: relative;
+}
+
+.hero__flechas{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.hero__flechas i {
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero__flechas i:hover {
+    background-color: rgba(179, 23, 33, 0.7);
+}
+
+
+.hero__indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #b31721;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+  
+
+/** Editando el menu **/
+
+.menu{
+margin: 0;
+}
+
+.menu__options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.menu__options > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px 5px;
+}
+
+.menu__iconos{
+    width: 70px;
+    margin-bottom: 1px;
+}
+
+.menu__tittle{
+    display: block;
+    margin-top: 3px;
+    font-size: 1em;
+}
+
+/** Editando las cartas del menu **/
+
+.menu__cards {
+    padding: 5px ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu__category {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.menu__category.active {
+    display: block;
+    animation: fadeIn 0.5 ease;
+}
+
+.category-title{
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-item{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0  4px 8px  #0001;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.menu-item:hover{
+    transform: translateY(-5px);
+}
+
+.menu-item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    font-size: 1.2rem;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.menu-item h5 {
+    font-size: 1.1rem;
+    color: #b31721;
+    margin: 5px 0 15px;
+}
+
+.menu-item button {
+    background-color: #b31721;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+    background-color: #c0392b;
+}
+
+.menu__options > div.active img {
+    transform: scale(1.1);
+}
+
+.menu__options > div.active h4 {
+    color: #b31721;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/** Editando las tarjetas **/
+
+.tarjetas{
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;;
+}
+
+.contenedor {  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.tarjetas__container {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: left;
+}
+
+
+.tarjetas__container:nth-child(1) { background: #952113; } /* Baklava */
+.tarjetas__container:nth-child(2) { background: #ff6401; } /* Cheesecake */
+.tarjetas__container:nth-child(3) { background: #ed361f; } /* Tiramisú */
+.tarjetas__container:nth-child(4) { background: #fba100; } /* Brownie */
+
+.header {
+    flex: 1; 
+    color: white;
+    padding-right: 20px;
+}
+
+.header h2 {
+    font-size: 45px;
+    margin: 0;
+
+}
+
+.header h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.imagen img {
+    width: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation-name: fa;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+
+}
+
+.btn_add {
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_add:hover {
+    background: #e0e0e0;
+}
+
+
+.window-backgroud{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.window-container{
+    position: relative;
+    background-color: white;
+    width: 550px;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 30px;
+    animation-name: modal;
+    animation-duration: .5s;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .4);
+}
+
+@keyframes modal{
+    from{
+        transform: translateY(50vh);
+
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+.close{
+    transition: transform 1s cubic-bezier (0, -0.43, 1, -0.41);
+    transform: translateY(60vh);
+}
+
+.close-button{
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    cursor: pointer;
+    margin-left: -20px;
+    left: 30px;
+}
+
+.icon-x{
+    fill: rgb(red, green, blue);
+}
+
+.imagen-modal{
+    height: 450px;
+    animation-name: girarb;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+}
+
+.modal-title, .modal-description{
+    margin: 0;
+}
+
+.modal-title{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: -50px;
+    color: black;
+}
+.modal-description{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+@keyframes fa {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.sobre-kebab-cards {
+    background-image: url('public/la-mejor-cocina-turca.jpg');
+    margin: 0;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px;
+    min-height: calc(60vh - 50px); 
+}
+
+.sobre-kebab-cards::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.nosotros-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    z-index: 1; 
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #b52b2b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #333;
+}
+
+@media (max-width: 992px) {
+    .nosotros-cards {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
+.card img {
+    width: 100px;  
+    height: auto; 
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--ENCABEZADO-->
+    <header>
+
+                <!--BARRA DE NAVEGACION-->
+            <nav class="navbar__nav">
+                
+                <img src="/public/Logo.webp" alt="" class="navbar__logo">
+
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Inicio</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Nosotros</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Contacto</a>
+                    </li>
+                </ul>
+
+                <div class="navbar__button">
+                    <a href="#menu__container" class="navbar__btn">Menú</a>
+                  </div>
+
+            </nav>
+     
+            
+            <!--HERO-->
+            <div class="hero">
+
+                <div class="hero__fondo carrusel__one">
+                    <div class="hero__text">
+                        <h1 class="hero__h1">Descubre la Autentica Comida Turca</h1>
+                        <h2 class="hero__h2">Sumérgete en la riqueza de la gastronomía
+                            turca,<br> donde cada bocado
+                            es una deleite de sabor y<br>  
+                            tradición
+                        </h2> 
+                    </div>
+                    <img src="/public/imagen.png" alt="" class="hero__img">
+
+                    <div class="hero__flechas">
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="hero__indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <!--SECCION PRINCIPAL-->
+    <main>
+        <section class="menú">
+
+            <div class="menu__container" id="menu__container">
+                <div class="menu__options">
+
+                    <div>
+                        <img src="/public/Icons/snacks.gif" class="menu__iconos" alt="">
+                        <h4 class="menu__tittle">Mezeler</h4>
+                    </div>
+
+                    <div>
+                        <img src="/public/Icons/platter.gif" class="menu__iconos" alt="">
+                        <h4 class="menu__tittle">Kebabs</h4>
+                    </div>
+
+                    <div>
+                        <img src="public/Icons/apple-pie.gif" class="menu__iconos" alt="">
+                        <h4 class="menu__tittle">Tatillar</h4>
+                    </div>
+
+                    <div>
+                        <img src="public/Icons/cold-drink.gif" class="menu__iconos" alt="">
+                        <h4 class="menu__tittle">Bebidas <br> tradicionales</h4>
+                    </div>
+
+                </div>
+    
+                <div class="menu__cards">
+
+                    <!--MEZELER-->
+                    <div class="menu__category" id="mezeler-section">
+                        <h3 class="category-title">Mezeler</h3>
+                        <div class="cards-container">
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Mezeler/baklava-en-saquitos.webp" alt="Baklava en saquitos">
+                                <h4>Baklava en saquitos</h4>
+                                <h5>$26.000</h5>
+                                <button>Añadir</button>
+                            </div>         
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Mezeler/kebab-y-baba-ganoush.webp" alt="">
+                                <h4>Kebab y baba ganoush</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+
+                            <div class="menu-item">
+                                <img
+                                 src="public/imagenes__menu/Mezeler/empanadillas-de-carne-kebab.webp"
+                                 alt=""
+                                 >
+                                <h4>Empanadillas de carne y kebab</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__category" id="kebabs-section">
+                        <h3 class="category-title">Kebabs</h3>
+                        <div class="cards-container">
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Kebabs/chicken-doner-kebab.webp" alt="">
+                                <h4>Chicken Doner Kebab</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                                
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Kebabs/lahmacun-pizza-turca.webp" alt="">
+                                <h4>Lahmacun Pizza Turca</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Kebabs/modal_dolma.png" alt="">
+                                <h4>Dolmas</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="menu__category" id="tatillar-section">
+                        <h3 class="category-title">Tatillar</h3>
+                        <div class="cards-container">
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Tatillar/Baklava.png" alt="">
+                                <h4>Baklava</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                                
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Kebabs/gullac.jpg" alt="">
+                                <h4>Gullac</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Kebabs/Kunefe.jpg" alt="">
+                                <h4>Kunefe</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__category" id="bebidas-section">
+                        <h3 class="category-title">Bebidas tradicionales</h3>
+                        <div class="cards-container">
+
+                            <div class="menu-item">
+                                <img src="public/imagenes__menu/Bebidas tradicionales/Turkish_tea2.jpg" alt="">
+                                <h4>Cay</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                                
+                            <div class="menu-item">
+                                <img src=
+                                "public/imagenes__menu/Bebidas tradicionales/Ayran.webp" alt="">
+                                <h4>Ayra</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="
+                                public/imagenes__menu/Bebidas tradicionales/Salgam Suyu.webp" alt="">
+                                <h4>Salgam Suyu</h4>
+                                <h5>$30.000</h5>
+                                <button>Añadir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+        </section>
+
+        <section class="tarjetas">
+
+            <div class="contenedor">
+    
+                <div class="tarjetas__container">
+                    <div class="header">
+                        <h2>Baklava</h2>
+                        <h4>Postre tradicional</h4>
+                        <button class="btn_add">Añadir</button>
+                    </div>
+                    <div class="imagen">
+                        <a href="#">
+                            <img src="/public/imagenes_tarjetas/imagen.png" alt="Baklava">
+                        </a>
+                    </div>
+                </div>
+            
+                    <div class="tarjetas__container">
+                        <div class="header">
+                            <h2>Menemen</h2>
+                            <h4>Desayuno tradicional turco</h4>
+                            <button class="btn_add">Añadir</button>
+                        </div>
+                        <div class="imagen">
+                            <a href="#">
+                                <img src="/public/imagenes_tarjetas/menemen.png" alt="Cheesecake">
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="tarjetas__container">
+                        <div class="header">
+                            <h2>Börek</h2>
+                            <h4>Pastel salado turco</h4>
+                            <button class="btn_add" id="btn_abrir">Añadir</button>
+                        </div>
+                        <div class="imagen">
+                            <a href="#">
+                                <img src="/public/imagenes_tarjetas/borek.png" alt="Tiramisú">
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="tarjetas__container">
+                        <div class="header">
+                            <h2>Dolma</h2>
+                            <h4>Plato relleno de arroz, carne y especias</h4>
+                            <button class="btn_add">Añadir</button>
+                        </div>
+                        <div class="imagen">
+                            <a href="#">
+                                <img src="/public/imagenes_tarjetas/dolma.png" alt="Brownie">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="window-backgroud" id="window-backgroud">
+                <div class="window-container" id="window-container">
+                    <button 
+                    class="close-button" id="close-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon-x">
+                            <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                        </svg>
+                    </button>
+                    <h1 class="modal-title">Titulo </h1>
+                    <img class="imagen-modal" alt="">
+                    <p class="modal-description">descripcion</p>
+            </div>
+
+
+        </section>
+
+    <section class="sobre-kebab-cards">
+        <div class="nosotros-cards">
+            <div class="card">
+                <img src="public/Icons/apple-pie.gif" alt="Cocina Tradicional">
+                <h3>Cocina Tradicional</h3>
+                <p>Sabores auténticos de Turquía con ingredientes frescos.</p>
+            </div>
+        
+            <div class="card">
+                <img src="public/Icons/cold-drink.gif" alt="Calidad Garantizada">
+                <h3>Calidad Garantizada</h3>
+                <p>Compromiso con la excelencia en cada plato servido.</p>
+            </div>
+        
+            <div class="card">
+                <img src="public/Icons/platter.gif" alt="Entrega Rápida">
+                <h3>Entrega Rápida</h3>
+                <p>Servicio de entrega eficiente para que disfrutes en casa.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
