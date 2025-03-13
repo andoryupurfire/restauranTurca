@@ -126,9 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.menuItems = document.querySelectorAll('.menu__options > div');
             this.categories = document.querySelectorAll('.menu__category');
             
-            // Mostrar la primera categoría por defecto
+            // Mostrar la primera categoría por defecto sin desplazamiento
             if (this.categories.length > 0) {
-                this.showCategory('mezeler-section');
+                this.showCategoryWithoutScroll('mezeler-section');
                 this.setActiveMenuItem(this.menuItems[0]);
             }
             
@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.addEventListener('click', () => {
                     const categoryIds = ['mezeler-section', 'kebabs-section', 'tatillar-section', 'bebidas-section'];
                     if (categoryIds[index]) {
+                        // Usar showCategory (con scroll) cuando se hace clic manualmente
                         this.showCategory(categoryIds[index]);
                         this.setActiveMenuItem(item);
                     }
@@ -147,7 +148,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         },
         
-        // Mostrar la categoría seleccionada y ocultar las demás
+        // Mostrar la categoría seleccionada SIN desplazamiento (para la carga inicial)
+        showCategoryWithoutScroll: function(categoryId) {
+            this.categories.forEach(category => {
+                if (category.id === categoryId) {
+                    category.classList.add('active');
+                } else {
+                    category.classList.remove('active');
+                }
+            });
+        },
+        
+        // Mostrar la categoría seleccionada CON desplazamiento (para clics)
         showCategory: function(categoryId) {
             this.categories.forEach(category => {
                 if (category.id === categoryId) {
@@ -175,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-
+    // Iniciar el menú interactivo
     menuInteractivo.init();
 
     const windowBackgroud = document.getElementById("window-backgroud"),
