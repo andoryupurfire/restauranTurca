@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Iniciar el menú interactivo
-    menuInteractivo.init();
+    menuInteractivo.init(); 
 
     const windowBackgroud = document.getElementById("window-backgroud"),
     windowContainer = document.getElementById("window-container"),
